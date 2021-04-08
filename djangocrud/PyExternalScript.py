@@ -30,9 +30,10 @@ def func33(data):
     print("hello")
     print(data)
     circuit = Circuit('non-inv Operational Amplifier')
+    print(circuit)
     #source=circuit.SinusoidalVoltageSource2('input', 'in', circuit.gnd, amplitude='1V')
     source=circuit.PulseVoltageSource2('input','in',circuit.gnd,initial_value='-1V',pulsed_value='1V',pulse_width='0.001s',period='0.004s')
-
+    print(circuit)
     circuit.R('R1','inverting_input',circuit.gnd,'1kOhm')
 
     circuit.R('input', 'in', 'inverting_input', '1MOhm')
@@ -44,7 +45,7 @@ def func33(data):
     circuit.R('RF', 'inverting_input', 'output', '10kOhm')
     #circuit.C('CF','inverting_input', 'output', 2@u_uF)
     circuit.R('load', 'output', circuit.gnd, '1kOhm')
-
+    print(circuit)
     simulator = circuit.simulator(temperature=25, nominal_temperature=25)
     analysis = simulator.transient(start_time=0,step_time=0.0001, end_time=0.08)
 
