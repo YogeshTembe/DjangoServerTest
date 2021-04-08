@@ -49,6 +49,7 @@ def func33(data):
     analysis = simulator.transient(start_time=0,step_time=0.0001, end_time=0.08)
 
     print(circuit)
+    sys.stdout.flush()
     lst=list()
     for i in analysis.output:
         lst.append(i)
