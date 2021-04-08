@@ -49,8 +49,8 @@ def func33(data):
     simulator = circuit.simulator(temperature=25, nominal_temperature=25)
     print("simu")
     print(circuit)
-    analysis = simulator.transient(start_time=0,step_time=0.0001, end_time=0.08)
-
+    #analysis = simulator.transient(start_time=0,step_time=0.0001, end_time=0.08)
+    analysis = simulator.ac(start_frequency='1', stop_frequency='1000000', number_of_points=10,  variation='dec')
     print(circuit)
     sys.stdout.flush()
     lst=list()
