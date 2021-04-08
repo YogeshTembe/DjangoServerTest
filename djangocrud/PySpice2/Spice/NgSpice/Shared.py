@@ -421,6 +421,7 @@ class NgSpiceShared:
                 raise NotImplementedError
 
             cls.LIBRARY_PATH = str(path)
+            print(cls.LIBRARY_PATH)
 
     ##############################################
 
@@ -531,6 +532,7 @@ class NgSpiceShared:
         self._logger.debug(message)
         if verbose:
             print(message)
+        print(self.library_path)
         self._ngspice_shared = ffi.dlopen(self.library_path)
 
         # Note: cannot yet execute command
