@@ -21,8 +21,6 @@ from PySpice.Spice.Netlist import SubCircuitFactory
 
 '''
 from .PySpice2.Logging import Logging as Logging
-from .PySpice2.Plot.BodeDiagram import bode_diagram
-from .PySpice2.Probe.Plot import plot
 from .PySpice2.Spice.Netlist import Circuit
 from .PySpice2.Unit import * 
 from .PySpice2.Spice.Netlist import SubCircuitFactory
