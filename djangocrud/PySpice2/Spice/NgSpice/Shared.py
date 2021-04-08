@@ -415,7 +415,8 @@ class NgSpiceShared:
                 path = 'libngspice{}.dylib'
 
             elif ConfigInstall.OS.on_linux:
-                path = 'libngspice{}.so'
+                path =os.path.abspath('.//PySpice2//Spice//NgSpice//Spice64_dll//dll-vs//ngspice.dll')
+                #path = 'libngspice{}.so'
 
             else:
                 raise NotImplementedError
