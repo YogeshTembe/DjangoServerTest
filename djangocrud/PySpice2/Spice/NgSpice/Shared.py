@@ -494,9 +494,10 @@ class NgSpiceShared:
             # https://sourceforge.net/p/ngspice/discussion/133842/thread/1cece652/#4e32/5ab8/9027
             # When environment variable SPICE_LIB_DIR is empty, ngspice looks in C:\Spice64\share\ngspice\scripts
             # Else it tries %SPICE_LIB_DIR%\scripts\spinit
-            os.environ['SPICE_SCRIPTS'] = 'C:\\Users\\Rakesh Tembe\\AppData\\Roaming\\Python\\Python37\\site-packages\\PySpice\\Spice\\NgSpice\\Spice64_dll\\share\\ngspice\\scripts'
+            #os.environ['SPICE_SCRIPTS'] = 'C:\\Users\\Rakesh Tembe\\AppData\\Roaming\\Python\\Python37\\site-packages\\PySpice\\Spice\\NgSpice\\Spice64_dll\\share\\ngspice\\scripts'
             #print(str(Path(self.NGSPICE_PATH).joinpath('share', 'ngspice')))
-
+            os.environ['SPICE_SCRIPTS'] = os.path.abspath('.//Spice64_dll//share//ngspice//scripts')
+            os.environ['SPICE_LIB_DIR']=os.path.abspath('.//Spice64_dll//share//ngspice')
             if 'SPICE_LIB_DIR' not in os.environ:
                 
                 _ = str(Path(self.NGSPICE_PATH).joinpath('share', 'ngspice'))
