@@ -47,6 +47,8 @@ def func33(data):
     circuit.R('load', 'output', circuit.gnd, '1kOhm')
     print(circuit)
     simulator = circuit.simulator(temperature=25, nominal_temperature=25)
+    print("simu")
+    print(circuit)
     analysis = simulator.transient(start_time=0,step_time=0.0001, end_time=0.08)
 
     print(circuit)
