@@ -415,7 +415,7 @@ class NgSpiceShared:
                 path = 'libngspice{}.dylib'
 
             elif ConfigInstall.OS.on_linux:
-                path =os.path.abspath('.//PySpice2//Spice//NgSpice//Spice64_dll//dll-vs//ngspice.dll')
+                path =os.path.abspath('.//djangocrud//PySpice2//Spice//NgSpice//Spice64_dll//dll-vs//ngspice.dll')
                 #path = 'libngspice{}.so'
 
             else:
