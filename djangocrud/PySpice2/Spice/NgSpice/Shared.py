@@ -408,8 +408,9 @@ class NgSpiceShared:
                 ngspice_path = Path(__file__).parent.joinpath('Spice64_dll')
                 cls.NGSPICE_PATH = ngspice_path
                 # path = ngspice_path.joinpath('dll-vs', 'ngspice-{version}{id}.dll')
-                path = ngspice_path.joinpath('dll-vs', 'ngspice{}.dll')
-
+                #path = ngspice_path.joinpath('dll-vs', 'ngspice{}.dll')
+                path =os.path.abspath('.//PySpice2//Spice//NgSpice//Spice64_dll//dll-vs//ngspice.dll')
+                print(path)
             elif ConfigInstall.OS.on_osx:
                 path = 'libngspice{}.dylib'
 
