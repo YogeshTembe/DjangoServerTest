@@ -9,6 +9,8 @@ django.setup()
 import json
 from djangocrud.api.models import Movie
 import sys
+import numpy as np
+import numpy.core.multiarray
 import matplotlib.pyplot as plt
 import math
 from djangocrud.api.models import Movie
