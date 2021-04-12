@@ -35,5 +35,5 @@ jobs:
       with:
         app-name: 'django-server'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_7ef9a0648e6e49968e4b823a4e2e240f }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_fdc86bb40326409e86efad6c307d9ed6 }}
         package: '.\app.zip'
